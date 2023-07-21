@@ -1,0 +1,64 @@
+@import './variables';
+
+@mixin desktop-md-down {
+
+	@media screen and (max-width: $break-point-desktop-md-max) {
+
+		@content;
+	}
+}
+
+@mixin desktop-sm-down {
+
+	@media screen and (max-width: $break-point-desktop-sm-max) {
+
+		@content;
+	}
+}
+
+@mixin tablet-down {
+
+	@media screen and (max-width: $break-point-tablet-max) {
+
+		@content;
+	}
+}
+
+@mixin phone-down {
+
+	@media screen and (max-width: $break-point-phone-max) {
+
+		@content;
+	}
+}
+
+@mixin phone-sm-down {
+
+	@media screen and (max-width: $break-point-phone-sm) {
+
+		@content;
+	}
+}
+@mixin phone-xs-down {
+
+	@media screen and (max-width: $break-point-phone-xs) {
+
+		@content;
+	}
+}
+
+@mixin responsive-down($breakpoint) {
+
+	@media screen and (max-width: $breakpoint) {
+
+		@content;
+	}
+}
+
+@mixin responsive-up($breakpoint) {
+
+	@media screen and (min-width: $breakpoint) {
+
+		@content;
+	}
+}

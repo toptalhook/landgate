@@ -1,0 +1,22 @@
+<header class="header">
+    <div class="container">
+        <ul class="nav">
+            <li class="nav__item" [ngClass]="{'selected_item': activePage === 'home'}"><a href="/home" class="nav__link" (click)="setActivePage('home')">Home</a></li>
+            <li class="nav__item" [ngClass]="{'selected_item': activePage === 'people'}"><a href="/people" class="nav__link" (click)="setActivePage('people')">People</a></li>
+            <li class="nav__item" [ngClass]="{'selected_item': activePage === 'about'}"><a href="#" class="nav__link" (click)="setActivePage('about')">About</a></li>
+            <li class="nav__item" [ngClass]="{'selected_item': activePage === 'blog'}"><a href="#" class="nav__link" (click)="setActivePage('blog')">Blog</a></li>
+            <li class="nav__item" [ngClass]="{'selected_item': activePage === 'contact'}"><a href="#" class="nav__link" (click)="setActivePage('contact')">Contact</a></li>
+        </ul>
+        <div class="mobile-nav-container">
+            <img *ngIf="!openBurgerMenu" (click)="toggleMenu()" src="assets/images/menu.png" width="30" alt="menu" class="toggle-button" />
+            <img *ngIf="openBurgerMenu" (click)="toggleMenu()" src="assets/images/close.png" width="30" alt="menu" class="toggle-button" />
+            <ul *ngIf="openBurgerMenu" class="mobile-nav">
+                <li class="mobile-nav__item"><a href="/home" class="mobile-nav__link">Home</a></li>
+                <li class="mobile-nav__item"><a href="/people" class="mobile-nav__link">People</a></li>
+                <li class="mobile-nav__item"><a href="#" class="mobile-nav__link">About</a></li>
+                <li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Blog</a></li>
+                <li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</header>

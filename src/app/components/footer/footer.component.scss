@@ -1,0 +1,27 @@
+@import '../../../styles/mixins';
+
+.footer {
+  background-color: $black;
+  color: $white;
+  padding: 5rem 0 2rem;
+
+  h4 {
+    font-weight: 900;
+  }
+
+  ul {
+    list-style-type: none;
+    font-size: 1rem;
+    margin: 0 0 3rem;
+    padding: 1.3rem 0 0 0;
+
+    li {
+      margin-bottom: 0.65rem;
+
+      a {
+        color: $white;
+        font-size: 1.25rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+<!-- TODO center text horizontally and vertically and style color white -->
+<section class="hero">
+    <div class="container">
+        <h1 class="text-white">LandGate - Find Your Land's Value for Sale</h1>
+        <input type="text" class="search-box" placeholder="Enter your search query">
+        <p class="small-text">Data Intelligence & Marketplace for Land and its Resources</p>
+    </div>
+</section>
+
+<section class="first-section">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 col-sm-6">
+                <app-card
+                    [title]="firstTitle"
+                    [description]="firstDescription"
+                    [cta-text]="firstCtaText"
+                ></app-card>
+            </div>
+        </div>
+        <div class="text-center">
+            <h2>We empower breakout brands</h2>
+            <p>From a low-code Page Builder--to our leading Frontend Platform.<br>We have a solution for every growth stage.</p>
+        </div>
+    </div>
+</section>
+
+<section class="second-section">
+    <div class="container">
+        <h1 class="text-center mb-5">Unrivaled design & performance. One frontend platform.</h1>
+        <div class="row mb-5">
+            <div class="col-12 col-sm-6">
+                <app-card
+                    [title]="secondTitle"
+                    [description]="secondDescription"
+                    [cta-text]="secondCtaText"
+                    cta-type="dark"
+                ></app-card>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-6"></div>
+            <div class="col-12 col-sm-6">
+                <app-card
+                    [title]="thirdTitle"
+                    [description]="thirdDescription"
+                    [cta-text]="thirdCtaText"
+                    cta-type="dark"
+                ></app-card>
+            </div>
+        </div>
+    </div>
+</section>

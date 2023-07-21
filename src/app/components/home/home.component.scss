@@ -1,0 +1,51 @@
+@import '../../../styles/mixins';
+
+section {
+    padding: 5rem 0;
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+}
+
+section.hero {
+    background-color: #408080;
+    background-size: contain;
+    width:auto;
+    background-repeat: no-repeat;
+    height: 500px;
+}
+
+section.first-section {
+    background-color: $light;
+}
+
+section.second-section {
+    background-color: $dark;
+    color: $white;
+}
+
+
+h1 {
+  margin-top: 30px;
+}
+
+.search-box {
+  width: 100%;
+  height: 40px;
+  padding: 8px;
+  margin-top: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.small-text {
+  margin-top: 10px;
+  font-size: 12px;
+  color: white;
+}

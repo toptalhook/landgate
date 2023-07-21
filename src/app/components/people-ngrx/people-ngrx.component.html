@@ -1,0 +1,52 @@
+<div class="container py-5" style="min-height: 800px;">
+  <h1>People</h1>
+    <table class="table table-striped table-bordered table-responsive">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col" width="1%">#</th>
+          <th scope="col" class="text-nowrap" width="15%">First Name</th>
+          <th scope="col" class="text-nowrap" width="15%">Last Name</th>
+          <th scope="col" class="text-nowrap" width="15%">Age</th>
+          <th scope="col" class="text-nowrap" width="55%">Job Title</th>
+          <th scope="col" class="text-nowrap" width="1%">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let person of people$ | async; index as i">
+          <th scope="row" class="align-middle">{{ i + 1 }}</th>
+          <td class="align-middle">
+            <div *ngIf="personIds.includes(i); else firstName">
+              <input name="firstName" class="form-control" [(ngModel)]="selectedPeople[i].firstName">
+            </div>
+            <ng-template #firstName>{{ person.firstName }}</ng-template>
+          </td>
+          <td class="align-middle">
+            <div *ngIf="personIds.includes(i); else lastName">
+              <input name="lastName" class="form-control" [(ngModel)]="selectedPeople[i].lastName">
+            </div>
+            <ng-template #lastName>{{ person.lastName }}</ng-template>
+          </td>
+          <td class="align-middle">
+            <div *ngIf="personIds.includes(i); else age">
+              <input name="age" class="form-control" [(ngModel)]="selectedPeople[i].age">
+            </div>
+            <ng-template #age>{{ person.age }}</ng-template>
+          </td>
+          <td class="align-middle">
+            <div *ngIf="personIds.includes(i); else jobTitle">
+              <input name="jobTitle" class="form-control" [(ngModel)]="selectedPeople[i].jobTitle">
+            </div>
+            <ng-template #jobTitle>{{ person.jobTitle }}</ng-template>
+          </td>
+          <td class="align-middle">
+            <div *ngIf="personIds.includes(i); else actions" class="d-flex flex-nowrap">
+              <button type="button" class="btn btn-danger mr-1" (click)="updatePerson(i, selectedPeople[i])">Save</button>
+              <button type="button" class="btn btn-secondary" (click)="deselectPerson(i, person)">Cancel</button>
+            </div>
+            <ng-template #actions><button type="button" class="btn btn-danger" (click)="selectPerson(i, person)">Edit</button></ng-template>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+

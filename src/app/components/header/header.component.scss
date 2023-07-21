@@ -1,0 +1,78 @@
+@import '../../../styles/mixins';
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: $white;
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+
+  .nav {
+    list-style-type: none;
+    font-size: 1.5rem;
+    display: flex;
+    flex-wrap: nowrap;
+
+    @include phone-down {
+      display: none;
+    }
+
+    &__item {
+      padding: 1.3rem 1.5rem;
+
+      &:hover {
+        background-color: #0a0a0a;
+        color: white;
+        transition: background-color 0.2s ease; 
+      }
+
+      &.selected_item {
+        background-color: $dark;
+        color: $white;
+      }
+    }
+
+    &__link {
+      color: $dark;
+        &:hover {
+        color: $white; 
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .mobile-nav-container {
+    display: none;
+
+    @include phone-down {
+      display: block;
+    }
+  }
+
+  .toggle-button {
+    cursor: pointer;
+    margin: 1rem 0;
+  }
+
+  .mobile-nav {
+    list-style-type: none;
+    font-size: 1.25rem;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 4rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: $white;
+
+    &__link {
+      color: $dark;
+      padding: 0.75rem 1.5rem;
+      display: block;
+      border: solid $light;
+      border-width: 0 0 1px;
+    }
+  }
+}
